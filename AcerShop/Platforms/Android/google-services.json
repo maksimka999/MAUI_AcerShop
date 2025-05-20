@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "223019245263",
+    "project_id": "mauiacershop",
+    "storage_bucket": "mauiacershop.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223019245263:android:7d5bbcca683a5eafaa21ba",
+        "android_client_info": {
+          "package_name": "com.companyname.acershop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223019245263-co0nq6db805amiigrsi7fmf6fcef7u0p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.acershop",
+            "certificate_hash": "6173dbd063495e28db7b4c8988870eede01029a7"
+          }
+        },
+        {
+          "client_id": "223019245263-blsgcj84m2g88hs492ac8o9cffkkf1g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARBEiPM32MB1d8x3U_1JrjTbyNmM6pKao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223019245263-blsgcj84m2g88hs492ac8o9cffkkf1g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

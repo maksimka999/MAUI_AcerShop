@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:svg="clr-namespace:Microsoft.Maui.Controls.Compatibility;assembly=Microsoft.Maui.Controls.Compatibility"
+    xmlns:viewmodel="clr-namespace:AcerShop.ViewModel"
+    x:DataType="viewmodel:LoginPageViewModel"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="{AppThemeBinding Light=#f0f0f0, Dark=#101010}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Margin="0,30"
+                Aspect="Fill"
+                HeightRequest="100"
+                Source="acer.png"
+                WidthRequest="100" />
+
+            <Frame
+                Grid.Row="1"
+                Margin="0,0,0,-40"
+                BackgroundColor="{AppThemeBinding Light=#f0f0f0,
+                                                  Dark=#1a1a1a}"
+                BorderColor="Green"
+                CornerRadius="50"
+                HasShadow="True"
+                HeightRequest="700">
+                <Grid
+                    Padding="20,50,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="С Возвращением!"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=LightGray}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Margin="0,-15,0,0"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Авторизуйтесь в аккаунт"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=LightGray}" />
+
+                    <material:TextField
+                        Title="E-mail"
+                        Grid.Row="2"
+                        Margin="0,20,0,0"
+                        AllowClear="True"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding UserName}"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=LightGray}"
+                        TitleColor="{AppThemeBinding Light=Gray,
+                                                     Dark=LightGray}"
+                        VerticalOptions="FillAndExpand" />
+
+                    <material:TextField
+                        Title="Пароль"
+                        Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="True"
+                        Text="{Binding UserPassword}"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=LightGray}"
+                        TitleColor="{AppThemeBinding Light=Gray,
+                                                     Dark=LightGray}"
+                        VerticalOptions="FillAndExpand">
+                        <material:TextField.Attachments>
+                            <material:TextFieldPasswordShowHideAttachment />
+                        </material:TextField.Attachments>
+                    </material:TextField>
+
+                    <Button
+                        Grid.Row="4"
+                        Margin="40,40,40,0"
+                        BackgroundColor="{AppThemeBinding Light=#101010,
+                                                          Dark=LightGray}"
+                        Command="{Binding LoginCommand}"
+                        CornerRadius="20"
+                        FontSize="16"
+                        MinimumHeightRequest="50"
+                        Text="Войти"
+                        TextColor="{AppThemeBinding Light=LightGray,
+                                                    Dark=#101010}" />
+
+                    <Label
+                        Grid.Row="5"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="или"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=LightGray}" />
+
+                    <Frame
+                        Grid.Row="6"
+                        Padding="10"
+                        BackgroundColor="{AppThemeBinding Light=White,
+                                                          Dark=#333}"
+                        CornerRadius="20"
+                        HorizontalOptions="CenterAndExpand">
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoogleLoginCommand}" />
+                            </Grid.GestureRecognizers>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image
+                                Grid.Column="0"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png"
+                                WidthRequest="30" />
+
+                            <Label
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                FontSize="16"
+                                Text="Вход через Gmail"
+                                TextColor="{AppThemeBinding Light=#1C375C,
+                                                            Dark=LightGray}"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
+                    </Frame>
+
+                    <Label
+                        Grid.Row="8"
+                        Margin="0,10,0,0"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Еще нет аккаунта? " TextColor="{AppThemeBinding Light=#1C375C, Dark=LightGray}" />
+                                <Span
+                                    Text="Зарегистрируйтесь тут"
+                                    TextColor="{AppThemeBinding Light=#1C375C,
+                                                                Dark=LightBlue}"
+                                    TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding RegisterBtnTappedCommand}" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

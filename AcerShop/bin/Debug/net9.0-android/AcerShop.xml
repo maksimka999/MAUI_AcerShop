@@ -1,0 +1,1481 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AcerShop</name>
+    </assembly>
+    <members>
+        <member name="T:AcerShop.Model.ChairDetails">
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.ProductId">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._productId"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.Material">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._material"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.Color">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._color"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.WeightCapacity">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._weightCapacity"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.AdjustableFeatures">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._adjustableFeatures"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.Dimensions">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._dimensions"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.WarrantyYears">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._warrantyYears"/>
+        </member>
+        <member name="P:AcerShop.Model.ChairDetails.ComfortRating">
+            <inheritdoc cref="F:AcerShop.Model.ChairDetails._comfortRating"/>
+        </member>
+        <member name="T:AcerShop.Model.MouseDetails">
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.ProductId">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._productId"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.Dpi">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._dpi"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.Buttons">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._buttons"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.ConnectionType">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._connectionType"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.ErgonomicDesign">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._ergonomicDesign"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.SensitivityAdjustment">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._sensitivityAdjustment"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.WirelessRange">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._wirelessRange"/>
+        </member>
+        <member name="P:AcerShop.Model.MouseDetails.CompatibilityPlatforms">
+            <inheritdoc cref="F:AcerShop.Model.MouseDetails._compatibilityPlatforms"/>
+        </member>
+        <member name="T:AcerShop.Model.LaptopDetails">
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.ProductId">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._productId"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.Processor">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._processor"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.Ram">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._ram"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.StorageSize">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._storageSize"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.ScreenSize">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._screenSize"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.GraphicsCard">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._graphicsCard"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.OperatingSystem">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._operatingSystem"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.BatteryLife">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._batteryLife"/>
+        </member>
+        <member name="P:AcerShop.Model.LaptopDetails.Weight">
+            <inheritdoc cref="F:AcerShop.Model.LaptopDetails._weight"/>
+        </member>
+        <member name="T:AcerShop.Model.CartItemDetailDto">
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.Model.CartItemDetailDto.Photo">
+            <inheritdoc cref="F:AcerShop.Model.CartItemDetailDto._photo"/>
+        </member>
+        <member name="P:AcerShop.Model.CartItemDetailDto.MaxQuantity">
+            <inheritdoc cref="F:AcerShop.Model.CartItemDetailDto._maxQuantity"/>
+        </member>
+        <member name="M:AcerShop.Model.CartItemDetailDto.OnPhotoChanged(System.Byte[])">
+            <summary>Executes the logic for when <see cref="P:AcerShop.Model.CartItemDetailDto.Photo"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.Model.CartItemDetailDto.Photo"/> is changed.</remarks>
+        </member>
+        <member name="M:AcerShop.Model.CartItemDetailDto.OnMaxQuantityChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.Model.CartItemDetailDto.MaxQuantity"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.Model.CartItemDetailDto.MaxQuantity"/> is changed.</remarks>
+        </member>
+        <member name="T:AcerShop.Model.User">
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.Model.User.Id">
+            <inheritdoc cref="F:AcerShop.Model.User._id"/>
+        </member>
+        <member name="P:AcerShop.Model.User.FirebaseUid">
+            <inheritdoc cref="F:AcerShop.Model.User._firebaseUid"/>
+        </member>
+        <member name="P:AcerShop.Model.User.RegistrationDate">
+            <inheritdoc cref="F:AcerShop.Model.User._registrationDate"/>
+        </member>
+        <member name="P:AcerShop.Model.User.CustomRole">
+            <inheritdoc cref="F:AcerShop.Model.User._customRole"/>
+        </member>
+        <member name="P:AcerShop.Model.User.Name">
+            <inheritdoc cref="F:AcerShop.Model.User._name"/>
+        </member>
+        <member name="P:AcerShop.Model.User.Gender">
+            <inheritdoc cref="F:AcerShop.Model.User._gender"/>
+        </member>
+        <member name="P:AcerShop.Model.User.DateOfBirth">
+            <inheritdoc cref="F:AcerShop.Model.User._dateOfBirth"/>
+        </member>
+        <member name="P:AcerShop.Model.User.PhoneNumber">
+            <inheritdoc cref="F:AcerShop.Model.User._phoneNumber"/>
+        </member>
+        <member name="P:AcerShop.Model.User.Photo">
+            <inheritdoc cref="F:AcerShop.Model.User._photo"/>
+        </member>
+        <member name="T:AcerShop.ViewModel.AddProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.Title">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._title"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.IsBusy">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._isBusy"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.Name">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._name"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.Description">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._description"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.PriceString">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._priceString"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.QuantityString">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._quantityString"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.PhotoBytes">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._photoBytes"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ProductImageSource">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._productImageSource"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.SelectedProductType">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._selectedProductType"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.IsLaptopDetailsVisible">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._isLaptopDetailsVisible"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.IsChairDetailsVisible">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._isChairDetailsVisible"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.IsMouseDetailsVisible">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._isMouseDetailsVisible"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopProcessor">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopProcessor"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopRam">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopRam"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopStorageSize">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopStorageSize"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopScreenSize">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopScreenSize"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopGraphicsCard">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopGraphicsCard"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopOperatingSystem">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopOperatingSystem"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopBatteryLife">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopBatteryLife"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.LaptopWeight">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._laptopWeight"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairMaterial">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairMaterial"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairColor">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairColor"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairWeightCapacity">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairWeightCapacity"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairAdjustableFeatures">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairAdjustableFeatures"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairDimensions">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairDimensions"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairWarrantyYears">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairWarrantyYears"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.ChairComfortRating">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._chairComfortRating"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseDpi">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseDpi"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseButtons">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseButtons"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseConnectionType">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseConnectionType"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseErgonomicDesign">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseErgonomicDesign"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseSensitivityAdjustment">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseSensitivityAdjustment"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseWirelessRange">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseWirelessRange"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.MouseCompatibilityPlatforms">
+            <inheritdoc cref="F:AcerShop.ViewModel.AddProductViewModel._mouseCompatibilityPlatforms"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.AddProductViewModel.OnSelectedProductTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.AddProductViewModel.SelectedProductType"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.AddProductViewModel.SelectedProductType"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.AddProductViewModel.pickPhotoCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AddProductViewModel.PickPhotoCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.PickPhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AddProductViewModel.PickPhotoAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AddProductViewModel.addProductCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AddProductViewModel.AddProductCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.AddProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AddProductViewModel.AddProductAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AddProductViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AddProductViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AddProductViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AddProductViewModel.CancelAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.AdminProductsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.Products">
+            <inheritdoc cref="F:AcerShop.ViewModel.AdminProductsViewModel._products"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.IsRefreshing">
+            <inheritdoc cref="F:AcerShop.ViewModel.AdminProductsViewModel._isRefreshing"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.SearchText">
+            <inheritdoc cref="F:AcerShop.ViewModel.AdminProductsViewModel._searchText"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.AdminProductsViewModel.OnSearchTextChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.SearchText"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.SearchText"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.AdminProductsViewModel.loadProductsCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.LoadProductsCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.LoadProductsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AdminProductsViewModel.LoadProducts"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AdminProductsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AdminProductsViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AdminProductsViewModel.goToEditProductCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.GoToEditProductCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.GoToEditProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.AdminProductsViewModel.GoToEditProduct(AcerShop.Model.Product)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AdminProductsViewModel.deleteProductCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.DeleteProductCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.DeleteProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.AdminProductsViewModel.DeleteProduct(AcerShop.Model.Product)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.AdminProductsViewModel.addProductCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.AdminProductsViewModel.AddProductCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.AdminProductsViewModel.AddProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.AdminProductsViewModel.AddProduct"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.CartPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.CartItems">
+            <inheritdoc cref="F:AcerShop.ViewModel.CartPageViewModel._cartItems"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.TotalPrice">
+            <inheritdoc cref="F:AcerShop.ViewModel.CartPageViewModel._totalPrice"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.IsLoading">
+            <inheritdoc cref="F:AcerShop.ViewModel.CartPageViewModel._isLoading"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.CurrentUser">
+            <inheritdoc cref="F:AcerShop.ViewModel.CartPageViewModel._currentUser"/>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.loadCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.LoadCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.LoadCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.LoadCart"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.increaseQuantityCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.IncreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.IncreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.IncreaseQuantity(AcerShop.Model.CartItemDetailDto)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.decreaseQuantityCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.DecreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.DecreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.DecreaseQuantity(AcerShop.Model.CartItemDetailDto)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.removeItemCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.RemoveItemCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.RemoveItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.RemoveItem(AcerShop.Model.CartItemDetailDto)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.clearCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.ClearCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.ClearCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.ClearCart"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.checkoutCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.CheckoutCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.CheckoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.Checkout"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.goToHomeCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.GoToHomeCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.GoToHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.GoToHome"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.CartPageViewModel.goToProfileCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.CartPageViewModel.GoToProfileCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.CartPageViewModel.GoToProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.CartPageViewModel.GoToProfile"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.EditProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.IsBusy">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._isBusy"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.Name">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._name"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.Description">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._description"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.PriceString">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._priceString"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.QuantityString">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._quantityString"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.TypeName">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._typeName"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.PhotoBytes">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._photoBytes"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ProductImageSource">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._productImageSource"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopProcessor">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopProcessor"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopRam">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopRam"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopStorageSize">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopStorageSize"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopScreenSize">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopScreenSize"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopGraphicsCard">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopGraphicsCard"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopOperatingSystem">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopOperatingSystem"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopBatteryLife">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopBatteryLife"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.LaptopWeight">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._laptopWeight"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairMaterial">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairMaterial"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairColor">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairColor"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairWeightCapacity">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairWeightCapacity"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairAdjustableFeatures">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairAdjustableFeatures"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairDimensions">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairDimensions"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairWarrantyYears">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairWarrantyYears"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ChairComfortRating">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._chairComfortRating"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseDpi">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseDpi"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseButtons">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseButtons"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseConnectionType">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseConnectionType"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseErgonomicDesign">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseErgonomicDesign"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseSensitivityAdjustment">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseSensitivityAdjustment"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseWirelessRange">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseWirelessRange"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.MouseCompatibilityPlatforms">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._mouseCompatibilityPlatforms"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.ProductToEdit">
+            <inheritdoc cref="F:AcerShop.ViewModel.EditProductViewModel._productToEdit"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.EditProductViewModel.OnProductToEditChanged(AcerShop.Model.Product)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.EditProductViewModel.ProductToEdit"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.EditProductViewModel.ProductToEdit"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.EditProductViewModel.pickPhotoCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.EditProductViewModel.PickPhotoCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.PickPhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.EditProductViewModel.PickPhotoAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.EditProductViewModel.saveProductCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.EditProductViewModel.SaveProductCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.SaveProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.EditProductViewModel.SaveProductAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.EditProductViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.EditProductViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.EditProductViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.EditProductViewModel.CancelAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.LoginPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.LoginPageViewModel.UserName">
+            <inheritdoc cref="F:AcerShop.ViewModel.LoginPageViewModel._userName"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.LoginPageViewModel.UserPassword">
+            <inheritdoc cref="F:AcerShop.ViewModel.LoginPageViewModel._userPassword"/>
+        </member>
+        <member name="F:AcerShop.ViewModel.LoginPageViewModel.googleLoginCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.LoginPageViewModel.GoogleLoginCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.LoginPageViewModel.GoogleLoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.LoginPageViewModel.GoogleLoginAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.LoginPageViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.LoginPageViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.LoginPageViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.LoginPageViewModel.LoginAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.LoginPageViewModel.registerBtnTappedCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.LoginPageViewModel.RegisterBtnTappedCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.LoginPageViewModel.RegisterBtnTappedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.LoginPageViewModel.RegisterBtnTappedAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.MainPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.Products">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._products"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.SearchText">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._searchText"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ShouldRefreshOnAppearing">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._shouldRefreshOnAppearing"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.IsLoading">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._isLoading"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.LoadingMessage">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._loadingMessage"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.IsFilterMenuVisible">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._isFilterMenuVisible"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.AvailableProductTypes">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._availableProductTypes"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.SelectedProductType">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._selectedProductType"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.MinPriceText">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._minPriceText"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.MaxPriceText">
+            <inheritdoc cref="F:AcerShop.ViewModel.MainPageViewModel._maxPriceText"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.MainPageViewModel.OnSearchTextChanged(System.String,System.String)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.MainPageViewModel.SearchText"/> just changed.</summary>
+            <param name="oldValue">The previous property value that was replaced.</param>
+            <param name="newValue">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.MainPageViewModel.SearchText"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.goToHomeCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.GoToHomeCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.GoToHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.GoToHome"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.reloadProductsCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.ReloadProductsCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ReloadProductsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.ReloadProductsAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.toggleFilterMenuCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.ToggleFilterMenuCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ToggleFilterMenuCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.ToggleFilterMenu"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.applyFiltersFromMenuCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.ApplyFiltersFromMenuCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ApplyFiltersFromMenuCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.ApplyFiltersFromMenu"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.resetFiltersAndApplyCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.ResetFiltersAndApplyCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ResetFiltersAndApplyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.ResetFiltersAndApply"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.viewProductDetailsCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.ViewProductDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.ViewProductDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.ViewProductDetails(AcerShop.Model.Product)"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.goToCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.GoToCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.GoToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.GoToCart"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.goToProfileCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.GoToProfileCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.GoToProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.GoToProfile"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.MainPageViewModel.addToCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.MainPageViewModel.AddToCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.MainPageViewModel.AddToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AcerShop.ViewModel.MainPageViewModel.AddToCart(AcerShop.Model.Product)"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.ProductDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.Product">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProductDetailsViewModel._product"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.IsImageZoomed">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProductDetailsViewModel._isImageZoomed"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.ProductImageSource">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProductDetailsViewModel._productImageSource"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.IsInCart">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProductDetailsViewModel._isInCart"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.ProductDetailsViewModel.OnProductChanged(AcerShop.Model.Product)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.ProductDetailsViewModel.Product"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.ProductDetailsViewModel.Product"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProductDetailsViewModel.addToCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProductDetailsViewModel.AddToCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.AddToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProductDetailsViewModel.AddToCart"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProductDetailsViewModel.toggleImageZoomCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProductDetailsViewModel.ToggleImageZoomCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.ToggleImageZoomCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProductDetailsViewModel.ToggleImageZoom"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProductDetailsViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProductDetailsViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProductDetailsViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProductDetailsViewModel.GoBackAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.ProfilePageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.EditableUser">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProfilePageViewModel._editableUser"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.UserPhotoSource">
+            <inheritdoc cref="F:AcerShop.ViewModel.ProfilePageViewModel._userPhotoSource"/>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.GoBackAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.changePhotoCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.ChangePhotoCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.ChangePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.ChangePhoto"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.switchAccountCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.SwitchAccountCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.SwitchAccountCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.SwitchAccount"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.openAdminPanelCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.OpenAdminPanelCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.OpenAdminPanelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.OpenAdminPanel"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.goToMainCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.GoToMainCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.GoToMainCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.GoToMainAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.goToCartCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.GoToCartCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.GoToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.GoToCartAsync"/>.</summary>
+        </member>
+        <member name="F:AcerShop.ViewModel.ProfilePageViewModel.goToSettingsCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.ProfilePageViewModel.GoToSettingsCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.ProfilePageViewModel.GoToSettingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.ProfilePageViewModel.GoToSettingsAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.ViewModel.RegisterViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AcerShop.ViewModel.RegisterViewModel.Email">
+            <inheritdoc cref="F:AcerShop.ViewModel.RegisterViewModel._email"/>
+        </member>
+        <member name="P:AcerShop.ViewModel.RegisterViewModel.Password">
+            <inheritdoc cref="F:AcerShop.ViewModel.RegisterViewModel._password"/>
+        </member>
+        <member name="M:AcerShop.ViewModel.RegisterViewModel.OnPasswordChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:AcerShop.ViewModel.RegisterViewModel.Password"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AcerShop.ViewModel.RegisterViewModel.Password"/> is changed.</remarks>
+        </member>
+        <member name="F:AcerShop.ViewModel.RegisterViewModel.registerUserCommand">
+            <summary>The backing field for <see cref="P:AcerShop.ViewModel.RegisterViewModel.RegisterUserCommand"/>.</summary>
+        </member>
+        <member name="P:AcerShop.ViewModel.RegisterViewModel.RegisterUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AcerShop.ViewModel.RegisterViewModel.RegisterUserAsync"/>.</summary>
+        </member>
+        <member name="T:AcerShop.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions">
+            <summary>
+            A helper type with generated registration stubs for types implementing <see cref="T:CommunityToolkit.Mvvm.Messaging.IRecipient`1"/>.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistrator(AcerShop.ViewModel.MainPageViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:AcerShop.ViewModel.MainPageViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:AcerShop.ViewModel.MainPageViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistratorWithToken``1(AcerShop.ViewModel.MainPageViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:AcerShop.ViewModel.MainPageViewModel"/> objects.
+            </summary>
+            <typeparam name="TToken">The type of tokens that will be used to register messages.</typeparam>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:AcerShop.ViewModel.MainPageViewModel"/> objects.</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Material">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Material" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Color">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Color" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WeightCapacity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WeightCapacity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AdjustableFeatures">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AdjustableFeatures" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Dimensions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Dimensions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WarrantyYears">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WarrantyYears" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ComfortRating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ComfortRating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Dpi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Dpi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Buttons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Buttons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConnectionType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConnectionType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErgonomicDesign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErgonomicDesign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SensitivityAdjustment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SensitivityAdjustment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WirelessRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WirelessRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompatibilityPlatforms">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompatibilityPlatforms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Processor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Processor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ram">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ram" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StorageSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StorageSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ScreenSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ScreenSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GraphicsCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GraphicsCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OperatingSystem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OperatingSystem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BatteryLife">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BatteryLife" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Weight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Weight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Photo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Photo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MaxQuantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MaxQuantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FirebaseUid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FirebaseUid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RegistrationDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RegistrationDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CustomRole">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CustomRole" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Gender">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Gender" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateOfBirth">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateOfBirth" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhoneNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhoneNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.QuantityString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "QuantityString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhotoBytes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhotoBytes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductImageSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductImageSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedProductType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedProductType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLaptopDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLaptopDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsChairDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsChairDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsMouseDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsMouseDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopProcessor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopProcessor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopRam">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopRam" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopStorageSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopStorageSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopScreenSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopScreenSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopGraphicsCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopGraphicsCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopOperatingSystem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopOperatingSystem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopBatteryLife">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopBatteryLife" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LaptopWeight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LaptopWeight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairMaterial">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairMaterial" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairWeightCapacity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairWeightCapacity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairAdjustableFeatures">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairAdjustableFeatures" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairDimensions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairDimensions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairWarrantyYears">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairWarrantyYears" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChairComfortRating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChairComfortRating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseDpi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseDpi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseButtons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseButtons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseConnectionType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseConnectionType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseErgonomicDesign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseErgonomicDesign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseSensitivityAdjustment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseSensitivityAdjustment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseWirelessRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseWirelessRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MouseCompatibilityPlatforms">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MouseCompatibilityPlatforms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CartItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CartItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TypeName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TypeName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductToEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductToEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShouldRefreshOnAppearing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShouldRefreshOnAppearing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoadingMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoadingMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsFilterMenuVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsFilterMenuVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AvailableProductTypes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AvailableProductTypes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MinPriceText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MinPriceText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MaxPriceText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MaxPriceText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsImageZoomed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsImageZoomed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsInCart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsInCart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EditableUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EditableUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserPhotoSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserPhotoSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Material">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Material" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Color">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Color" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WeightCapacity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WeightCapacity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AdjustableFeatures">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AdjustableFeatures" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Dimensions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Dimensions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WarrantyYears">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WarrantyYears" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ComfortRating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ComfortRating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Dpi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Dpi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Buttons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Buttons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConnectionType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConnectionType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErgonomicDesign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErgonomicDesign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SensitivityAdjustment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SensitivityAdjustment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WirelessRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WirelessRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompatibilityPlatforms">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompatibilityPlatforms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Processor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Processor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ram">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ram" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StorageSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StorageSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ScreenSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ScreenSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GraphicsCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GraphicsCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OperatingSystem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OperatingSystem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BatteryLife">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BatteryLife" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Weight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Weight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Photo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Photo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MaxQuantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MaxQuantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FirebaseUid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FirebaseUid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RegistrationDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RegistrationDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CustomRole">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CustomRole" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Gender">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Gender" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateOfBirth">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateOfBirth" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhoneNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhoneNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.QuantityString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "QuantityString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhotoBytes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhotoBytes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductImageSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductImageSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedProductType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedProductType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLaptopDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLaptopDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsChairDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsChairDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsMouseDetailsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsMouseDetailsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopProcessor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopProcessor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopRam">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopRam" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopStorageSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopStorageSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopScreenSize">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopScreenSize" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopGraphicsCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopGraphicsCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopOperatingSystem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopOperatingSystem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopBatteryLife">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopBatteryLife" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LaptopWeight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LaptopWeight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairMaterial">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairMaterial" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairWeightCapacity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairWeightCapacity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairAdjustableFeatures">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairAdjustableFeatures" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairDimensions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairDimensions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairWarrantyYears">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairWarrantyYears" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChairComfortRating">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChairComfortRating" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseDpi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseDpi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseButtons">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseButtons" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseConnectionType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseConnectionType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseErgonomicDesign">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseErgonomicDesign" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseSensitivityAdjustment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseSensitivityAdjustment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseWirelessRange">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseWirelessRange" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MouseCompatibilityPlatforms">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MouseCompatibilityPlatforms" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CartItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CartItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TypeName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TypeName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductToEdit">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductToEdit" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShouldRefreshOnAppearing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShouldRefreshOnAppearing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoadingMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoadingMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsFilterMenuVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsFilterMenuVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AvailableProductTypes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AvailableProductTypes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MinPriceText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MinPriceText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MaxPriceText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MaxPriceText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsImageZoomed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsImageZoomed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsInCart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsInCart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EditableUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EditableUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserPhotoSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserPhotoSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+    </members>
+</doc>

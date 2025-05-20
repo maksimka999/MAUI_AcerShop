@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.EditProductPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:AcerShop.Model"
+    xmlns:viewmodel="clr-namespace:AcerShop.ViewModel"
+    x:DataType="viewmodel:EditProductViewModel"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--  Light Theme Colors (как в текущей версии)  -->
+            <Color x:Key="PrimaryColorLight">#1C375C</Color>
+            <Color x:Key="SecondaryColorLight">White</Color>
+            <Color x:Key="TextColorLight">Black</Color>
+            <Color x:Key="BackgroundColorLight">White</Color>
+            <Color x:Key="EntryBackgroundColorLight">White</Color>
+            <Color x:Key="FrameBorderColorLight">LightGray</Color>
+            <Color x:Key="ImageBackgroundColorLight">LightGray</Color>
+
+            <!--  Dark Theme Colors (сохраняем текущий стиль)  -->
+            <Color x:Key="PrimaryColorDark">green</Color>
+            <!--  Красная кнопка  -->
+            <Color x:Key="SecondaryColorDark">#121212</Color>
+            <Color x:Key="TextColorDark">White</Color>
+            <Color x:Key="BackgroundColorDark">#121212</Color>
+            <Color x:Key="EntryBackgroundColorDark">#1E1E1E</Color>
+            <Color x:Key="FrameBorderColorDark">#333333</Color>
+            <Color x:Key="ImageBackgroundColorDark">DarkGray</Color>
+
+            <!--  Common Styles  -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource EntryBackgroundColorLight}, Dark={StaticResource EntryBackgroundColorDark}}" />
+                <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light=Gray, Dark=LightGray}" />
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource FrameBorderColorLight}, Dark={StaticResource FrameBorderColorDark}}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource EntryBackgroundColorLight}, Dark={StaticResource EntryBackgroundColorDark}}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}">
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Frame
+                Margin="0,0,0,10"
+                Padding="0"
+                BorderColor="{AppThemeBinding Light={StaticResource FrameBorderColorLight},
+                                              Dark={StaticResource FrameBorderColorDark}}"
+                CornerRadius="10"
+                HasShadow="False"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                WidthRequest="200">
+                <Image
+                    x:Name="ProductImage"
+                    Aspect="AspectFit"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource ImageBackgroundColorLight},
+                                                      Dark={StaticResource ImageBackgroundColorDark}}"
+                    HeightRequest="200"
+                    Source="{Binding ProductImageSource}"
+                    WidthRequest="200" />
+            </Frame>
+
+            <Button
+                BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                  Dark={StaticResource PrimaryColorDark}}"
+                Command="{Binding PickPhotoCommand}"
+                CornerRadius="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Изменить фото"
+                TextColor="White" />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Название" />
+            <Entry Placeholder="Название товара" Text="{Binding Name}" />
+
+            <Label Text="Описание" />
+            <Entry Placeholder="Описание товара" Text="{Binding Description}" />
+
+            <Label Text="Цена" />
+            <Entry
+                Keyboard="Numeric"
+                Placeholder="Цена"
+                Text="{Binding PriceString}" />
+
+            <Label Text="Количество" />
+            <Entry
+                Keyboard="Numeric"
+                Placeholder="Кол-во на складе"
+                Text="{Binding QuantityString}" />
+
+            <VerticalStackLayout IsVisible="{Binding IsLaptopDetailsVisible}" Spacing="10">
+                <Label
+                    Margin="0,10,0,20"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Детали Ноутбука" />
+                <Label Text="Процессор" />
+                <Entry Placeholder="напр., Intel Core i7" Text="{Binding LaptopProcessor}" />
+                <Label Text="ОЗУ" />
+                <Entry Placeholder="напр., 16GB" Text="{Binding LaptopRam}" />
+                <Label Text="Накопитель" />
+                <Entry Placeholder="напр., 512GB SSD" Text="{Binding LaptopStorageSize}" />
+                <Label Text="Экран" />
+                <Entry Placeholder="напр., 15.6 дюймов" Text="{Binding LaptopScreenSize}" />
+                <Label Text="Видеокарта" />
+                <Entry Placeholder="напр., NVIDIA RTX 3060" Text="{Binding LaptopGraphicsCard}" />
+                <Label Text="ОС" />
+                <Entry Placeholder="напр., Windows 11" Text="{Binding LaptopOperatingSystem}" />
+                <Label Text="Батарея" />
+                <Entry Placeholder="напр., 8 часов" Text="{Binding LaptopBatteryLife}" />
+                <Label Text="Вес" />
+                <Entry Placeholder="напр., 1.8 кг" Text="{Binding LaptopWeight}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout IsVisible="{Binding IsChairDetailsVisible}" Spacing="10">
+                <Label
+                    Margin="0,10,0,20"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Детали Стула" />
+                <Label Text="Материал" />
+                <Entry Placeholder="напр., Пластик" Text="{Binding ChairMaterial}" />
+                <Label Text="Цвет" />
+                <Entry Placeholder="напр., Красный" Text="{Binding ChairColor}" />
+                <Label Text="Выдерживает нагрузки (кг)" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 200"
+                    Text="{Binding ChairWeightCapacity}" />
+                <Label Text="Регулируемые функции" />
+                <Entry Placeholder="напр., Штабелируемый" Text="{Binding ChairAdjustableFeatures}" />
+                <Label Text="Размеры" />
+                <Entry Placeholder="напр., 25 x 25 x 40 дюймов" Text="{Binding ChairDimensions}" />
+                <Label Text="Гарантия" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 2 years"
+                    Text="{Binding ChairWarrantyYears}" />
+                <Label Text="Рейтинг комфорта(*/10)" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 8 stars"
+                    Text="{Binding ChairComfortRating}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout IsVisible="{Binding IsMouseDetailsVisible}" Spacing="10">
+                <Label
+                    Margin="0,10,0,20"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Детали Ноутбука" />
+                <Label Text="DPI" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 800"
+                    Text="{Binding MouseDpi}" />
+                <Label Text="Количество кнопок" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 5"
+                    Text="{Binding MouseButtons}" />
+                <Label Text="Тип соединения" />
+                <Entry Placeholder="напр., Провод" Text="{Binding MouseConnectionType}" />
+                <Label Text="Эргономичный дизайн?" />
+                <Entry Placeholder="напр., Да" Text="{Binding MouseErgonomicDesign}" />
+                <Label Text="Регулировка чувствительности" />
+                <Entry Placeholder="напр., Стандарт" Text="{Binding MouseSensitivityAdjustment}" />
+                <Label Text="Диапазон беспроводной связи(метры)" />
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="напр., 20"
+                    Text="{Binding MouseWirelessRange}" />
+                <Label Text="Поддерживаемые платформы" />
+                <Entry Placeholder="напр., MacOS" Text="{Binding MouseCompatibilityPlatforms}" />
+            </VerticalStackLayout>
+
+            <ActivityIndicator
+                Margin="0,10"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                Color="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                        Dark={StaticResource PrimaryColorDark}}" />
+
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                  Dark={StaticResource PrimaryColorDark}}"
+                Command="{Binding SaveProductCommand}"
+                CornerRadius="20"
+                HeightRequest="50"
+                IsEnabled="{Binding IsNotBusy}"
+                Text="Сохранить изменения"
+                TextColor="White" />
+
+            <Button
+                Margin="0,5,0,0"
+                BackgroundColor="Red"
+                Command="{Binding CancelCommand}"
+                CornerRadius="20"
+                HeightRequest="50"
+                Opacity="0.5"
+                Text="Отмена"
+                TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

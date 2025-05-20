@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.ProductDetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:AcerShop.Converters"
+    xmlns:model="clr-namespace:AcerShop.Model"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewmodel="clr-namespace:AcerShop.ViewModel"
+    Title="Детали товара"
+    x:DataType="viewmodel:ProductDetailsViewModel"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--  Цвета для светлой темы  -->
+            <Color x:Key="PrimaryLight">#1C375C</Color>
+
+            <Color x:Key="BackgroundLight">#F5F5F5</Color>
+            <Color x:Key="CardLight">White</Color>
+
+            <!--  Цвета для темной темы  -->
+            <Color x:Key="PrimaryDark">Green</Color>
+
+            <Color x:Key="BackgroundDark">#121212</Color>
+            <Color x:Key="CardDark">#1E1E1E</Color>
+
+            <!--  Стили  -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=LightGray}" />
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardLight}, Dark={StaticResource CardDark}}" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundLight}, Dark={StaticResource BackgroundDark}}">
+        <!--  Основной контент  -->
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,Auto,*" RowSpacing="0">
+
+                <!--  Шапка с кнопкой назад  -->
+                <Frame
+                    Grid.Row="0"
+                    Padding="20,20,20,20"
+                    BackgroundColor="Transparent"
+                    HasShadow="False">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Command="{Binding GoBackCommand}"
+                        FontSize="18"
+                        HorizontalOptions="Start"
+                        Text="Назад"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=White}" />
+                </Frame>
+
+                <!--  Изображение товара с анимацией  -->
+                <Border
+                    Grid.Row="1"
+                    HeightRequest="350"
+                    HorizontalOptions="Fill"
+                    Stroke="Transparent">
+                    <Frame
+                        Padding="0"
+                        CornerRadius="0"
+                        IsClippedToBounds="True">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="350"
+                            Source="{Binding ProductImageSource}" />
+                    </Frame>
+                </Border>
+
+                <!--  Карточка с основной информацией  -->
+                <Frame
+                    Grid.Row="2"
+                    Margin="20,-30,20,0"
+                    Padding="25"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource CardLight},
+                                                      Dark={StaticResource CardDark}}"
+                    HasShadow="True">
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="12">
+                        <!--  Название  -->
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="24"
+                            Text="{Binding Product.Name}"
+                            TextColor="{AppThemeBinding Light=#1C375C,
+                                                        Dark={StaticResource PrimaryDark}}" />
+
+                        <!--  Цена  -->
+                        <Label
+                            Grid.Row="1"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="{Binding Product.Price, StringFormat='Цена: {0:C}'}" />
+
+                        <!--  Тип товара  -->
+                        <Label
+                            Grid.Row="2"
+                            FontSize="16"
+                            Text="{Binding Product.TypeName}"
+                            TextColor="{AppThemeBinding Light=Gray,
+                                                        Dark=LightGray}" />
+
+                        <Button
+                            Grid.Row="3"
+                            Margin="0,15,0,0"
+                            BackgroundColor="{Binding Product.ButtonBackgroundColor}"
+                            Command="{Binding AddToCartCommand}"
+                            CornerRadius="12"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HeightRequest="50"
+                            IsEnabled="{Binding Product.IsAddToCartEnabled}"
+                            Text="{Binding Product.ButtonText}"
+                            TextColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!--  Детали товара  -->
+                <VerticalStackLayout
+                    Grid.Row="3"
+                    Margin="20,30,20,40"
+                    Spacing="20">
+
+                    <!--  Описание  -->
+                    <Frame Padding="20">
+                        <VerticalStackLayout Spacing="10">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="Описание"
+                                TextColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                                                            Dark={StaticResource PrimaryDark}}" />
+
+                            <Label FontSize="15" Text="{Binding Product.Description}" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!--  Динамические характеристики  -->
+                    <Frame Padding="20" IsVisible="{Binding IsLaptopDetailsVisible}">
+                        <VerticalStackLayout Spacing="10">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="Характеристики ноутбука"
+                                TextColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                                                            Dark={StaticResource PrimaryDark}}" />
+
+                            <Grid
+                                ColumnDefinitions="Auto,*"
+                                ColumnSpacing="15"
+                                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                                RowSpacing="8">
+                                <!--  Процессор  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Процессор:" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.Processor}" />
+
+                                <!--  ОЗУ  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Оперативная память:" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.Ram}" />
+
+                                <!--  Накопитель  -->
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Накопитель:" />
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.StorageSize}" />
+
+                                <!--  Экран  -->
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Экран:" />
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.ScreenSize}" />
+
+                                <!--  Видеокарта  -->
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Видеокарта:" />
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.GraphicsCard}" />
+
+                                <!--  Операционная система  -->
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="ОС:" />
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.OperatingSystem}" />
+
+                                <!--  Время работы от батареи  -->
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Батарея:" />
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.BatteryLife}" />
+
+                                <!--  Вес  -->
+                                <Label
+                                    Grid.Row="7"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Вес:" />
+                                <Label
+                                    Grid.Row="7"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.LaptopDetails.Weight}" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!--  Характеристики кресла  -->
+                    <Frame Padding="20" IsVisible="{Binding IsChairDetailsVisible}">
+                        <VerticalStackLayout Spacing="10">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="Характеристики кресла"
+                                TextColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                                                            Dark={StaticResource PrimaryDark}}" />
+
+                            <Grid
+                                ColumnDefinitions="Auto,*"
+                                ColumnSpacing="15"
+                                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                                RowSpacing="8">
+                                <!--  Материал  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Материал:" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.Material}" />
+
+                                <!--  Цвет  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Цвет:" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.Color}" />
+
+                                <!--  Макс. нагрузка  -->
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Макс. нагрузка:" />
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.WeightCapacity, StringFormat='{0} кг'}" />
+
+                                <!--  Регулируемые функции  -->
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Регулировки:" />
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.AdjustableFeatures}" />
+
+                                <!--  Размеры  -->
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Размеры:" />
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.Dimensions}" />
+
+                                <!--  Гарантия  -->
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Гарантия:" />
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.WarrantyYears, StringFormat='{0} лет'}" />
+
+                                <!--  Рейтинг комфорта  -->
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Комфорт:" />
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.ChairDetails.ComfortRating, StringFormat='{0}/10'}" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!--  Характеристики мыши  -->
+                    <Frame Padding="20" IsVisible="{Binding IsMouseDetailsVisible}">
+                        <VerticalStackLayout Spacing="10">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="Характеристики мыши"
+                                TextColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                                                            Dark={StaticResource PrimaryDark}}" />
+
+                            <Grid
+                                ColumnDefinitions="Auto,*"
+                                ColumnSpacing="15"
+                                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                                RowSpacing="8">
+                                <!--  DPI  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="DPI:" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.Dpi}" />
+
+                                <!--  Кнопки  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Кнопки:" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.Buttons}" />
+
+                                <!--  Тип подключения  -->
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Подключение:" />
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.ConnectionType}" />
+
+                                <!--  Эргономичный дизайн  -->
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Эргономика:" />
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.ErgonomicDesign}" />
+
+                                <!--  Регулировка чувствительности  -->
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Чувствительность:" />
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.SensitivityAdjustment}" />
+
+                                <!--  Беспроводной диапазон  -->
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Диапазон:" />
+                                <Label
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.WirelessRange}" />
+
+                                <!--  Совместимость  -->
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Text="Совместимость:" />
+                                <Label
+                                    Grid.Row="6"
+                                    Grid.Column="1"
+                                    Text="{Binding Product.MouseDetails.CompatibilityPlatforms}" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+
+        <!--  Индикатор загрузки  -->
+        <ActivityIndicator
+            BackgroundColor="#80000000"
+            HorizontalOptions="Center"
+            IsRunning="{Binding IsLoading}"
+            IsVisible="{Binding IsLoading}"
+            VerticalOptions="Center"
+            Color="{AppThemeBinding Light={StaticResource PrimaryLight},
+                                    Dark={StaticResource PrimaryDark}}" />
+    </Grid>
+</ContentPage>

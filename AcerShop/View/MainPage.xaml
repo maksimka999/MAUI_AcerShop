@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:AcerShop.Converters"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+    xmlns:model="using:AcerShop.Model"
+    xmlns:viewModel="using:AcerShop.ViewModel"
+    Title="Acer Shop"
+    x:DataType="viewModel:MainPageViewModel"
+    BackgroundColor="{AppThemeBinding Light=#F5F5F5,
+                                      Dark=Black}"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <converters:InCartToTextConverter x:Key="InCartToTextConverter" />
+            <converters:InCartToColorConverter x:Key="InCartToColorConverter" />
+            <converters:QuantityToColorConverter x:Key="QuantityToColorConverter" />
+            <converters:InCartToEnabledConverter x:Key="InCartToEnabledConverter" />
+
+            <!--  Цвета  -->
+            <Color x:Key="PrimaryColor">#1C375C</Color>
+            <Color x:Key="SecondaryColor">#4CAF50</Color>
+            <Color x:Key="DisabledColor">#CCCCCC</Color>
+
+            <Color x:Key="PrimaryColorLight">#1C375C</Color>
+
+            <Color x:Key="PrimaryColorDark">green</Color>
+
+            <Shadow
+                x:Key="BalancedShadow"
+                Brush="{AppThemeBinding Light=Gray,
+                                        Dark=Black}"
+                Opacity="0.25"
+                Radius="12"
+                Offset="5,5" />
+
+            <Style x:Key="ProductCardBorderStyle" TargetType="Border">
+                <Setter Property="Stroke" Value="{AppThemeBinding Light=LightGray, Dark=#333}" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 15" />
+                <Setter Property="Shadow" Value="{StaticResource BalancedShadow}" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#1c1c1c}" />
+                <Setter Property="StrokeThickness" Value="1" />
+            </Style>
+
+            <Style x:Key="FilterMenuBorderStyle" TargetType="Border">
+                <Setter Property="StrokeShape" Value="RoundRectangle 8" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#2c2c2c}" />
+                <Setter Property="Shadow" Value="{StaticResource BalancedShadow}" />
+            </Style>
+
+            <Style x:Key="FilterButtonBaseStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Padding" Value="12,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+
+            <Style
+                x:Key="ApplyButtonStyle"
+                BasedOn="{StaticResource FilterButtonBaseStyle}"
+                TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4CAF50" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style
+                x:Key="ResetButtonStyle"
+                BasedOn="{StaticResource FilterButtonBaseStyle}"
+                TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#F44336" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+
+            <Style x:Key="ProductCardImageStyle" TargetType="Image">
+                <Setter Property="HeightRequest" Value="180" />
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+            </Style>
+
+            <Style x:Key="ProductCardNameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#1C375C, Dark=White}" />
+                <Setter Property="MaxLines" Value="2" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+
+            <Style x:Key="ProductCardTypeStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#1C375C, Dark=LightGray}" />
+                <Setter Property="Margin" Value="0,2,0,5" />
+            </Style>
+
+            <Style x:Key="ProductCardPriceStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#1C375C, Dark=#ccc}" />
+            </Style>
+
+            <Style x:Key="ProductCardQuantityStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#666, Dark=#ccc}" />
+                <Setter Property="Margin" Value="0,5,0,0" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid
+            ColumnDefinitions="Auto, *, Auto"
+            ColumnSpacing="0"
+            RowDefinitions="Auto, *"
+            RowSpacing="0">
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="20,10,0,0"
+                HeightRequest="30"
+                HorizontalOptions="Center"
+                Source="icon.png"
+                VerticalOptions="Center"
+                WidthRequest="30" />
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="15,15,0,5"
+                Padding="0"
+                BackgroundColor="{AppThemeBinding Light=#EEEEEE,
+                                                  Dark=#222}"
+                StrokeShape="RoundRectangle 25"
+                StrokeThickness="0">
+                <SearchBar
+                    BackgroundColor="Transparent"
+                    CancelButtonColor="{AppThemeBinding Light=#1C375C,
+                                                        Dark=LightGray}"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Поиск товаров..."
+                    PlaceholderColor="{AppThemeBinding Light=Gray,
+                                                       Dark=LightGray}"
+                    SearchCommand="{Binding SearchCommand}"
+                    Text="{Binding SearchText}"
+                    TextColor="{AppThemeBinding Light=Black,
+                                                Dark=White}"
+                    VerticalOptions="Center" />
+            </Border>
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="2"
+                Margin="5,0,10,10"
+                BackgroundColor="Transparent"
+                Command="{Binding ToggleFilterMenuCommand}"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="40">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="MaterialIconsOutlined"
+                        Glyph="&#x2304;"
+                        Size="24"
+                        Color="{AppThemeBinding Light=Gray,
+                                                Dark=White}" />
+                </ImageButton.Source>
+            </ImageButton>
+            <RefreshView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="10,25,10,75"
+                Command="{Binding ReloadProductsCommand}"
+                IsRefreshing="{Binding IsLoading}">
+                <CollectionView ItemsSource="{Binding Products}" SelectionMode="None">
+
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout
+                            HorizontalItemSpacing="15"
+                            Orientation="Vertical"
+                            Span="2"
+                            VerticalItemSpacing="15" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Product">
+                            <Border Style="{StaticResource ProductCardBorderStyle}">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MainPageViewModel}}, Path=ViewProductDetailsCommand}" CommandParameter="{Binding .}" />
+
+                                </Border.GestureRecognizers>
+
+                                <VerticalStackLayout Spacing="5">
+                                    <Image Source="{Binding PhotoSource}" Style="{StaticResource ProductCardImageStyle}" />
+                                    <Label Style="{StaticResource ProductCardNameStyle}" Text="{Binding Name}" />
+                                    <Label Style="{StaticResource ProductCardTypeStyle}" Text="{Binding TypeName}" />
+                                    <Label Style="{StaticResource ProductCardPriceStyle}" Text="{Binding Price, StringFormat='Цена: {0:C}'}" />
+                                    <Label Style="{StaticResource ProductCardQuantityStyle}" Text="{Binding Quantity, StringFormat='Остаток: {0}'}" />
+                                    <Button
+                                        Margin="0,5,0,0"
+                                        BackgroundColor="{Binding ButtonBackgroundColor}"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MainPageViewModel}}, Path=AddToCartCommand}"
+                                        CommandParameter="{Binding .}"
+                                        CornerRadius="5"
+                                        IsEnabled="{Binding IsAddToCartEnabled}"
+                                        Text="{Binding ButtonText}"
+                                        TextColor="{AppThemeBinding Light=White,
+                                                                    Dark=White}" />
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.EmptyView>
+                        <ContentView>
+                            <VerticalStackLayout
+                                Padding="20"
+                                HorizontalOptions="Center"
+                                Spacing="10"
+                                VerticalOptions="Center">
+                                <Image
+                                    HeightRequest="80"
+                                    Source="{AppThemeBinding Light=empty_cart_light.png,
+                                                             Dark=empty_cart_dark.png}"
+                                    WidthRequest="80" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Нет товаров в наличии или по вашему запросу."
+                                    TextColor="{AppThemeBinding Light=Gray,
+                                                                Dark=LightGray}" />
+
+                            </VerticalStackLayout>
+                        </ContentView>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+            </RefreshView>
+            <Border
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="10,70,10,0"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsFilterMenuVisible}"
+                Style="{StaticResource FilterMenuBorderStyle}"
+                VerticalOptions="Start"
+                WidthRequest="-1">
+                <VerticalStackLayout Padding="15" Spacing="10">
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Выберите фильтр:"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}" />
+
+                    <Label
+                        FontSize="12"
+                        Text="Тип товара:"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}" />
+                    <Picker
+                        Title="Все типы"
+                        ItemsSource="{Binding AvailableProductTypes}"
+                        SelectedItem="{Binding SelectedProductType}"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}" />
+
+                    <Label
+                        FontSize="12"
+                        Text="Цена от:"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}" />
+                    <Border
+                        BackgroundColor="{AppThemeBinding Light=#EEEEEE,
+                                                          Dark=#222}"
+                        Stroke="{AppThemeBinding Light=LightGray,
+                                                 Dark=#333}"
+                        StrokeShape="RoundRectangle 5"
+                        StrokeThickness="1">
+                        <Entry
+                            ClearButtonVisibility="WhileEditing"
+                            Keyboard="Numeric"
+                            Placeholder="Мин. цена"
+                            PlaceholderColor="{AppThemeBinding Light=Gray,
+                                                               Dark=LightGray}"
+                            Text="{Binding MinPriceText}"
+                            TextColor="{AppThemeBinding Light=Black,
+                                                        Dark=White}" />
+                    </Border>
+
+                    <Label
+                        FontSize="12"
+                        Text="Цена до:"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}" />
+                    <Border
+                        BackgroundColor="{AppThemeBinding Light=#EEEEEE,
+                                                          Dark=#222}"
+                        Stroke="{AppThemeBinding Light=LightGray,
+                                                 Dark=#333}"
+                        StrokeShape="RoundRectangle 5"
+                        StrokeThickness="1">
+                        <Entry
+                            ClearButtonVisibility="WhileEditing"
+                            Keyboard="Numeric"
+                            Placeholder="Макс. цена"
+                            PlaceholderColor="{AppThemeBinding Light=Gray,
+                                                               Dark=LightGray}"
+                            Text="{Binding MaxPriceText}"
+                            TextColor="{AppThemeBinding Light=Black,
+                                                        Dark=White}" />
+                    </Border>
+
+
+                    <HorizontalStackLayout Margin="0,10,0,0" Spacing="10">
+                        <Button
+                            Command="{Binding ResetFiltersAndApplyCommand}"
+                            Style="{StaticResource ResetButtonStyle}"
+                            Text="Сбросить" />
+                        <Button
+                            Command="{Binding ApplyFiltersFromMenuCommand}"
+                            Style="{StaticResource ApplyButtonStyle}"
+                            Text="Применить" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <BoxView
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="{AppThemeBinding Light=Black,
+                                                  Dark=White}"
+                IsVisible="{Binding IsLoading}"
+                Opacity="0.5" />
+
+            <VerticalStackLayout
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                IsVisible="{Binding IsLoading}"
+                Spacing="10"
+                VerticalOptions="Center">
+                <ActivityIndicator
+                    IsRunning="{Binding IsLoading}"
+                    Scale="1.5"
+                    Color="{AppThemeBinding Light=Blue,
+                                            Dark=LightBlue}" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    Text="{Binding LoadingMessage}"
+                    TextColor="{AppThemeBinding Light=Black,
+                                                Dark=White}" />
+            </VerticalStackLayout>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="0"
+                BackgroundColor="{AppThemeBinding Light=LightGray,
+                                                  Dark=#1e1e1e}"
+                ColumnDefinitions="*,*,*"
+                HeightRequest="60"
+                RowDefinitions="Auto"
+                VerticalOptions="End">
+                <ImageButton
+                    Grid.Column="0"
+                    Margin="0,8,0,0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="35"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"
+                    Source="{FontImage Glyph=&#xE88A;,
+                                       FontFamily=Material}"
+                    VerticalOptions="Center"
+                    Visual="Default"
+                    WidthRequest="35" />
+
+                <ImageButton
+                    Grid.Column="1"
+                    Margin="0,8,0,0"
+                    BackgroundColor="Transparent"
+                    Command="{Binding GoToCartCommand}"
+                    HeightRequest="35"
+                    HorizontalOptions="Center"
+                    Source="{FontImage Glyph=&#xE8CC;,
+                                       FontFamily=Material}"
+                    VerticalOptions="Center"
+                    Visual="Default"
+                    WidthRequest="35" />
+
+                <ImageButton
+                    Grid.Column="2"
+                    Margin="8,8,0,0"
+                    BackgroundColor="Transparent"
+                    Command="{Binding GoToProfileCommand}"
+                    HeightRequest="3"
+                    HorizontalOptions="Center"
+                    Source="{FontImage Glyph=&#xE7FD;,
+                                       FontFamily=Material}"
+                    VerticalOptions="Center"
+                    Visual="Default"
+                    WidthRequest="35" />
+
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,205 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tvink\\source\\repos\\AcerShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\view\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:view\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\viewmodel\\profilepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:viewmodel\\profilepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\viewmodel\\adminproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:viewmodel\\adminproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\viewmodel\\addproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:viewmodel\\addproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|c:\\users\\tvink\\source\\repos\\acershop\\viewmodel\\productdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81484CA-D410-4207-B07D-6F3F49D12AB2}|AcerShop.csproj|solutionrelative:viewmodel\\productdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:28:09.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T21:28:06.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:27:59.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\Services\\ApiService.cs",
+              "RelativeToolTip": "Services\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:25:19.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\View\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "View\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\View\\ProfilePage.xaml",
+              "RelativeToolTip": "View\\ProfilePage.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T21:13:35.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfilePageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\ProfilePageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ProfilePageViewModel.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\ProfilePageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ProfilePageViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:02:05.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MainPageViewModel.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\MainPageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MainPageViewModel.cs",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAYwHQBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T20:46:26.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminProductsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\AdminProductsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\AdminProductsViewModel.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\AdminProductsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\AdminProductsViewModel.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswHkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T20:44:31.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\AddProductViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\AddProductViewModel.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\AddProductViewModel.cs",
+              "RelativeToolTip": "ViewModel\\AddProductViewModel.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T20:44:25.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\Model\\Products.cs",
+              "RelativeDocumentMoniker": "Model\\Products.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\Model\\Products.cs",
+              "RelativeToolTip": "Model\\Products.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAUwNYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:18:16.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\ProductDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ProductDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\tvink\\source\\repos\\AcerShop\\ViewModel\\ProductDetailsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ProductDetailsViewModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwEkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:43:44.828Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

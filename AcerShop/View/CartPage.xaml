@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.CartPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:AcerShop.Model"
+    xmlns:viewModel="clr-namespace:AcerShop.ViewModel"
+    Title="Корзина"
+    x:DataType="viewModel:CartPageViewModel"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColorLight">#1C375C</Color>
+            <Color x:Key="SecondaryColorLight">#00994C</Color>
+            <Color x:Key="DangerColorLight">#FF3D00</Color>
+            <Color x:Key="BackgroundColorLight">#F5F5F5</Color>
+            <Color x:Key="CardBackgroundLight">White</Color>
+            <Color x:Key="BorderColorLight">#DDDDDD</Color>
+            <Color x:Key="ImageBackgroundLight">#EEEEEE</Color>
+            <Color x:Key="PrimaryColorDark">#00994C</Color>
+            <Color x:Key="SecondaryColorDark">#1C375C</Color>
+            <Color x:Key="DangerColorDark">#990000</Color>
+            <Color x:Key="BackgroundColorDark">#101010</Color>
+            <Color x:Key="CardBackgroundDark">#1A1A1A</Color>
+            <Color x:Key="BorderColorDark">#333333</Color>
+            <Color x:Key="ImageBackgroundDark">#2A2A2A</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}" />
+            </Style>
+
+            <Style x:Key="CardFrameStyle" TargetType="Frame">
+                <Setter Property="Margin" Value="20,10" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource BorderColorLight}, Dark={StaticResource BorderColorDark}}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="ActionButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="20,10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" Style="{StaticResource CardFrameStyle}">
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="Общая сумма:" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="{Binding TotalPrice, StringFormat='{0:C}'}"
+                    TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                Dark={StaticResource PrimaryColorDark}}" />
+            </StackLayout>
+        </Frame>
+
+        <RefreshView
+            Grid.Row="1"
+            Command="{Binding LoadCartCommand}"
+            IsRefreshing="{Binding IsLoading}">
+            <CollectionView
+                EmptyView="Ваша корзина пуста"
+                ItemsSource="{Binding CartItems}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:CartItemDetailDto">
+                        <Frame Style="{StaticResource CardFrameStyle}">
+                            <StackLayout Padding="15" Spacing="10">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="{Binding Name}" />
+
+                                <Grid
+                                    ColumnDefinitions="100,*,Auto"
+                                    ColumnSpacing="15"
+                                    RowDefinitions="Auto, Auto"
+                                    RowSpacing="5">
+                                    <Frame
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="0"
+                                        Padding="0"
+                                        BackgroundColor="{AppThemeBinding Light={StaticResource ImageBackgroundLight},
+                                                                          Dark={StaticResource ImageBackgroundDark}}"
+                                        BorderColor="{AppThemeBinding Light={StaticResource BorderColorLight},
+                                                                      Dark={StaticResource BorderColorDark}}"
+                                        CornerRadius="10"
+                                        HeightRequest="100"
+                                        WidthRequest="100">
+                                        <Image
+                                            Aspect="AspectFit"
+                                            BackgroundColor="Transparent"
+                                            Source="{Binding ProductImageSource}" />
+                                    </Frame>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        FontSize="14"
+                                        Text="{Binding Price, StringFormat='{0:C}'}"
+                                        VerticalOptions="Center" />
+
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Orientation="Horizontal"
+                                        Spacing="5">
+                                        <Button
+                                            Padding="0"
+                                            BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                                              Dark={StaticResource PrimaryColorDark}}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CartPageViewModel}}, Path=DecreaseQuantityCommand}"
+                                            CommandParameter="{Binding .}"
+                                            HeightRequest="40"
+                                            Text="-"
+                                            WidthRequest="40" />
+                                        <Label
+                                            FontSize="16"
+                                            HorizontalTextAlignment="Center"
+                                            Text="{Binding Quantity}"
+                                            VerticalTextAlignment="Center"
+                                            WidthRequest="40" />
+                                        <Button
+                                            Padding="0"
+                                            BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                                              Dark={StaticResource PrimaryColorDark}}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CartPageViewModel}}, Path=IncreaseQuantityCommand}"
+                                            CommandParameter="{Binding .}"
+                                            HeightRequest="40"
+                                            IsEnabled="{Binding CanIncrease}"
+                                            Text="+"
+                                            WidthRequest="40">
+                                            <Button.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding CanIncrease}"
+                                                    TargetType="Button"
+                                                    Value="False">
+                                                    <Setter Property="BackgroundColor" Value="LightGray" />
+                                                </DataTrigger>
+                                            </Button.Triggers>
+                                        </Button>
+                                    </StackLayout>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        FontSize="16"
+                                        HorizontalOptions="Start"
+                                        Text="{Binding Subtotal, StringFormat='Сумма: {0:C}'}"
+                                        VerticalOptions="Center" />
+
+                                    <Button
+                                        Grid.Row="1"
+                                        Grid.Column="2"
+                                        BackgroundColor="{AppThemeBinding Light={StaticResource DangerColorLight},
+                                                                          Dark={StaticResource DangerColorDark}}"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CartPageViewModel}}, Path=RemoveItemCommand}"
+                                        CommandParameter="{Binding .}"
+                                        CornerRadius="10"
+                                        HeightRequest="40"
+                                        HorizontalOptions="End"
+                                        Text="Удалить"
+                                        TextColor="White"
+                                        VerticalOptions="Center" />
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <StackLayout Grid.Row="2" Spacing="0">
+            <Button
+                BackgroundColor="{AppThemeBinding Light={StaticResource DangerColorLight},
+                                                  Dark={StaticResource DangerColorDark}}"
+                Command="{Binding ClearCartCommand}"
+                Style="{StaticResource ActionButtonStyle}"
+                Text="Очистить корзину" />
+            <Button
+                BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                  Dark={StaticResource PrimaryColorDark}}"
+                Command="{Binding CheckoutCommand}"
+                Style="{StaticResource ActionButtonStyle}"
+                Text="Оформить заказ" />
+        </StackLayout>
+
+        <Grid
+            Grid.Row="3"
+            BackgroundColor="{AppThemeBinding Light=LightGray,
+                                              Dark=#1e1e1e}"
+            ColumnDefinitions="*,*,*"
+            HeightRequest="60">
+            <ImageButton
+                Grid.Column="0"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                Command="{Binding GoToHomeCommand}"
+                HeightRequest="35"
+                HorizontalOptions="Center"
+                Source="{FontImage Glyph=&#xE88A;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+            <ImageButton
+                Grid.Column="1"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                IsEnabled="False"
+                Source="{FontImage Glyph=&#xE8CC;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+            <ImageButton
+                Grid.Column="2"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                Command="{Binding GoToProfileCommand}"
+                Source="{FontImage Glyph=&#xE7FD;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,8 @@
+﻿<style name="Maui.SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+	<item name="android:windowFullscreen">true</item>
+	<item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+	<!-- Для Android 12+ -->
+	<item name="android:windowSplashScreenAnimatedIcon">@mipmap/appicon_round</item>
+	<item name="android:windowLightStatusBar">true</item>
+	<item name="android:windowLightNavigationBar">true</item>
+</style>

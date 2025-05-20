@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcerShop", "AcerShop.csproj", "{B81484CA-D410-4207-B07D-6F3F49D12AB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B81484CA-D410-4207-B07D-6F3F49D12AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81484CA-D410-4207-B07D-6F3F49D12AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81484CA-D410-4207-B07D-6F3F49D12AB2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B81484CA-D410-4207-B07D-6F3F49D12AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81484CA-D410-4207-B07D-6F3F49D12AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2997F91-7D1A-4CBE-B825-CFA2A7FF1502}
+	EndGlobalSection
+EndGlobal

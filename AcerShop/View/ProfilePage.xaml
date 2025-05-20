@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.ProfilePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:AcerShop.Controls"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:model="using:AcerShop.Model"
+    xmlns:viewModel="using:AcerShop.ViewModel"
+    Title="Профиль пользователя"
+    x:DataType="viewModel:ProfilePageViewModel"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <Style x:Key="InputFrame" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#f5f5f5, Dark=#2a2a2a}" />
+            <Setter Property="BorderColor" Value="{AppThemeBinding Light=#DDDDDD, Dark=#444444}" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HasShadow" Value="False" />
+        </Style>
+
+        <Style x:Key="InputLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Light=#666666, Dark=#AAAAAA}" />
+            <Setter Property="Margin" Value="12,12,12,0" />
+        </Style>
+
+        <Style x:Key="InputControl" TargetType="View">
+            <Setter Property="Margin" Value="12,0,12,12" />
+        </Style>
+
+        <Shadow
+            x:Key="BalancedShadow"
+            Brush="{AppThemeBinding Light=Gray,
+                                    Dark=Black}"
+            Opacity="0.25"
+            Radius="12"
+            Offset="5,5" />
+        <Style x:Key="FilterMenuBorderStyle" TargetType="Border">
+            <Setter Property="StrokeShape" Value="RoundRectangle 8" />
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#2c2c2c}" />
+            <Setter Property="Shadow" Value="{StaticResource BalancedShadow}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*, Auto">
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout
+                Padding="20,20,20,40"
+                BackgroundColor="{AppThemeBinding Light=White,
+                                                  Dark=#1a1a1a}"
+                Spacing="20">
+
+                <Button
+                    Padding="0,0,8,0"
+                    BackgroundColor="Transparent"
+                    Command="{Binding GoBackCommand}"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Назад"
+                    TextColor="{AppThemeBinding Light=#1C375C,
+                                                Dark=White}" />
+
+                <Border
+                    HeightRequest="150"
+                    HorizontalOptions="Center"
+                    Stroke="{AppThemeBinding Light=#1C375C,
+                                             Dark=#00994C}"
+                    StrokeShape="RoundRectangle 75"
+                    StrokeThickness="2"
+                    WidthRequest="150">
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="140"
+                        Source="{Binding UserPhotoSource}"
+                        WidthRequest="140">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangePhotoCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="2">
+                    <Frame Style="{StaticResource InputFrame}">
+                        <VerticalStackLayout>
+                            <Label
+                                FontSize="16"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource InputLabel}"
+                                Text="Имя" />
+                            <Entry
+                                Placeholder="Введите ваше имя"
+                                Style="{StaticResource InputControl}"
+                                Text="{Binding EditableUser.Name, Mode=TwoWay}"
+                                TextColor="{AppThemeBinding Light=#1C375C,
+                                                            Dark=White}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                    <Label
+                        Margin="0,10,0,0"
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding CurrentUser.CustomRole}"
+                        TextColor="{AppThemeBinding Light=Gray,
+                                                    Dark=LightGray}" />
+                </VerticalStackLayout>
+
+                <BoxView BackgroundColor="{AppThemeBinding Light=#eee, Dark=#333}" HeightRequest="1" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Детали профиля:"
+                    TextColor="{AppThemeBinding Light=#1C375C,
+                                                Dark=White}" />
+
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource InputLabel}"
+                    Text="Пол" />
+                <Frame Style="{StaticResource InputFrame}">
+                    <Picker
+                        ItemsSource="{Binding Genders}"
+                        SelectedItem="{Binding EditableUser.Gender, Mode=TwoWay}"
+                        Style="{StaticResource InputControl}"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=White}" />
+                </Frame>
+
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource InputLabel}"
+                    Text="Дата рождения" />
+                <Frame Style="{StaticResource InputFrame}">
+                    <DatePicker
+                        Date="{Binding EditableUser.DateOfBirth, Mode=TwoWay}"
+                        Format="dd.MM.yyyy"
+                        Style="{StaticResource InputControl}"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=White}" />
+                </Frame>
+
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource InputLabel}"
+                    Text="Телефон" />
+                <Frame Style="{StaticResource InputFrame}">
+                    <Entry
+                        Keyboard="Telephone"
+                        Placeholder="Введите номер телефона"
+                        Style="{StaticResource InputControl}"
+                        Text="{Binding EditableUser.PhoneNumber, Mode=TwoWay}"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=White}" />
+                </Frame>
+
+
+                <Label
+                    FontSize="16"
+                    Style="{StaticResource InputLabel}"
+                    Text="Дата регистрации" />
+
+                <Label
+                    FontAttributes="Italic"
+                    Style="{StaticResource InputControl}"
+                    Text="{Binding CurrentUser.RegistrationDate, StringFormat='{0:dd.MM.yyyy HH:mm}'}"
+                    TextColor="{AppThemeBinding Light=#1C375C,
+                                                Dark=White}" />
+                <BoxView BackgroundColor="{AppThemeBinding Light=#eee, Dark=#333}" HeightRequest="1" />
+
+                <Button
+                    Margin="0,15,0,0"
+                    BackgroundColor="{AppThemeBinding Light=Green,
+                                                      Dark=Green}"
+                    Command="{Binding SaveCommand}"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill"
+                    Opacity="0.7"
+                    Text="Сохранить изменения"
+                    TextColor="{AppThemeBinding Light=White,
+                                                Dark=White}" />
+
+                <Button
+                    Margin="0,15,0,0"
+                    BackgroundColor="{AppThemeBinding Light=#FF3D00,
+                                                      Dark=#990000}"
+                    Command="{Binding SwitchAccountCommand}"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill"
+                    Opacity="{AppThemeBinding Light=0.8,
+                                              Dark=1}"
+                    Text="Сменить аккаунт"
+                    TextColor="White" />
+
+                <Button
+                    Margin="0,15,0,0"
+                    BackgroundColor="{AppThemeBinding Light=#1C375C,
+                                                      Dark=#006666}"
+                    Command="{Binding OpenAdminPanelCommand}"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill"
+                    IsVisible="{Binding CurrentUser.IsAdmin}"
+                    Text="Панель администратора"
+                    TextColor="{AppThemeBinding Light=White,
+                                                Dark=White}" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid
+            Grid.Row="1"
+            Margin="0"
+            BackgroundColor="{AppThemeBinding Light=LightGray,
+                                              Dark=#1e1e1e}"
+            ColumnDefinitions="*,*,*"
+            HeightRequest="60"
+            RowDefinitions="Auto"
+            VerticalOptions="EndAndExpand">
+            <ImageButton
+                Grid.Column="0"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                Command="{Binding GoToMainCommand}"
+                HeightRequest="35"
+                HorizontalOptions="Center"
+                Source="{FontImage Glyph=&#xE88A;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+
+            <ImageButton
+                Grid.Column="1"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                Command="{Binding GoToCartCommand}"
+                HeightRequest="35"
+                HorizontalOptions="Center"
+                Source="{FontImage Glyph=&#xE8CC;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+
+            <ImageButton
+                Grid.Column="2"
+                Margin="0,8,0,0"
+                BackgroundColor="Transparent"
+                HeightRequest="35"
+                HorizontalOptions="Center"
+                IsEnabled="False"
+                Source="{FontImage Glyph=&#xE7FD;,
+                                   FontFamily=Material}"
+                VerticalOptions="Center"
+                Visual="Default"
+                WidthRequest="35" />
+
+
+        </Grid>
+    </Grid>
+</ContentPage>

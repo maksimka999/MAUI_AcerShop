@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AcerShop.View.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:AcerShop.Controls"
+    xmlns:converters="clr-namespace:AcerShop.Converters"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:mctbehaviors="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+    xmlns:viewmodel="clr-namespace:AcerShop.ViewModel"
+    x:DataType="viewmodel:RegisterViewModel"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:StrengthToColorConverter x:Key="StrengthToColor" />
+            <converters:BoolToColorConverter x:Key="BoolToColor" />
+            <converters:BoolToSmileyConverter x:Key="BoolToSmiley" />
+            <converters:LengthToSmileyConverter x:Key="LengthToSmiley" />
+            <converters:LengthToColorConverter x:Key="LengthToColor" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="{AppThemeBinding Light=#f0f0f0, Dark=#101010}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Margin="0,30"
+                Aspect="Fill"
+                HeightRequest="100"
+                Source="acer.png"
+                WidthRequest="100" />
+
+            <Frame
+                Grid.Row="1"
+                Margin="0,0,0,-40"
+                BackgroundColor="{AppThemeBinding Light=White,
+                                                  Dark=#1a1a1a}"
+                BorderColor="Green"
+                CornerRadius="50"
+                HasShadow="True"
+                HeightRequest="700">
+
+                <Grid Padding="20,50,20,0" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        Text="Регистрация"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=White}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Margin="0,-15,0,0"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        Text="Создайте ваш аккаунт"
+                        TextColor="{AppThemeBinding Light=#1C375C,
+                                                    Dark=LightGray}" />
+
+                    <material:TextField
+                        Title="E-mail"
+                        Grid.Row="2"
+                        Margin="0,20,0,0"
+                        AllowClear="True"
+                        Text="{Binding Email}"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}"
+                        TitleColor="{AppThemeBinding Light=Gray,
+                                                     Dark=LightGray}" />
+
+                    <material:TextField
+                        x:Name="PasswordEntry"
+                        Title="Пароль"
+                        Grid.Row="3"
+                        IsPassword="True"
+                        Text="{Binding Password}"
+                        TextColor="{AppThemeBinding Light=Black,
+                                                    Dark=White}"
+                        TitleColor="{AppThemeBinding Light=Gray,
+                                                     Dark=LightGray}">
+                        <material:TextField.Attachments>
+                            <material:TextFieldPasswordShowHideAttachment />
+                        </material:TextField.Attachments>
+                    </material:TextField>
+
+
+                    <controls:PasswordMeter Grid.Row="4" Strength="{Binding PasswordStrength}" />
+
+                    <Grid
+                        x:Name="RulesStack"
+                        Grid.Row="5"
+                        ColumnDefinitions="2*,8*"
+                        RowDefinitions="*,*,*,*,*"
+                        RowSpacing="10">
+
+                        <!--  contains lower  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            FontFamily="FontAwesome"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding validation.ContainsLower, Converter={StaticResource BoolToSmiley}}"
+                            TextColor="{Binding validation.ContainsLower, Converter={StaticResource BoolToColor}}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Содержит буквы нижнего регистра"
+                            TextColor="{Binding validation.ContainsLower, Converter={StaticResource BoolToColor}}"
+                            VerticalTextAlignment="Center" />
+
+                        <!--  contains upper  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            FontFamily="FontAwesome"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding validation.ContainsUpper, Converter={StaticResource BoolToSmiley}}"
+                            TextColor="{Binding validation.ContainsUpper, Converter={StaticResource BoolToColor}}" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="Содержит буквы верхнего регистра"
+                            TextColor="{Binding validation.ContainsUpper, Converter={StaticResource BoolToColor}}"
+                            VerticalTextAlignment="Center" />
+
+                        <!--  contains number  -->
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            FontFamily="FontAwesome"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding validation.ContainsNumber, Converter={StaticResource BoolToSmiley}}"
+                            TextColor="{Binding validation.ContainsNumber, Converter={StaticResource BoolToColor}}" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="Содержит цифры"
+                            TextColor="{Binding validation.ContainsNumber, Converter={StaticResource BoolToColor}}"
+                            VerticalTextAlignment="Center" />
+
+                        <!--  contains symbol  -->
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            FontFamily="FontAwesome"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding validation.ContainsSymbol, Converter={StaticResource BoolToSmiley}}"
+                            TextColor="{Binding validation.ContainsSymbol, Converter={StaticResource BoolToColor}}" />
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            FontFamily="FontAwesome"
+                            Text="Содержит специальные символы"
+                            TextColor="{Binding validation.ContainsSymbol, Converter={StaticResource BoolToColor}}"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+
+                    <Button
+                        Grid.Row="6"
+                        Margin="40,40,40,0"
+                        BackgroundColor="{AppThemeBinding Light=#101010,
+                                                          Dark=White}"
+                        Command="{Binding RegisterUserCommand}"
+                        CornerRadius="20"
+                        FontSize="16"
+                        MinimumHeightRequest="50"
+                        Text="Зарегистрироваться"
+                        TextColor="{AppThemeBinding Light=White,
+                                                    Dark=#101010}" />
+
+
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
